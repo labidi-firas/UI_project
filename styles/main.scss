@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'mixins';
+@import 'button';
+@import 'profile';
+
+body {
+    font-family: $font-stack;
+    color: $primary-color-dark;
+    height: 100vh;
+    @include flex;
+    @include responsive(mobile) {
+        background-color: #ffccf9; // light pink
+    }
+    @include responsive(tablet) {
+        background-color: #ff99c8; // pink
+    }
+    @include responsive(desktop) {
+        background-color: #ff66b2; // hot pink
+    }
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #ff1493; // deep pink
+}
+.haha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // space between the containers
+}
+.container {
+    @include flex(row);
+    background-color: #ffb6c1; // light pink
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff69b4; // hot pink border
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,82 @@
+// @use 'sass:color';
+// .btn{
+//     display: inline-block;
+//     border: 1px solid $primary-color-dark;
+//     border-radius: 5px;
+//     padding: 10px 20px;
+//     font-weight: bold;
+//     cursor: pointer;
+//     transition: background-color 0.2s ease-in-out;
+//     &-primary{
+//         background-color: $primary-color;
+//         &hover{
+//             background-color: lighten($primary-color,10%);
+//         }
+//     }
+//     &-danger{
+//         background-color: rgb(182, 23, 23);
+//         &:hover{
+//             background-color: color.adjust(rgb(244, 132, 132),$lightness:-10%);
+//         }
+//     }
+    
+// }
+
+
+
+@use 'sass:color';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $primary-color-dark;
+    border-radius: 12px; // Increased border radius for a more rounded look
+    padding: 14px 28px; // Increased padding for a larger button
+    font-weight: 700; // Bolder font weight
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Comic Sans MS', cursive, sans-serif; // Playful font
+    text-transform: uppercase; // Uppercase text for a playful look
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Enhanced shadow for a more pronounced effect
+    position: relative; // For pseudo-elements
+    overflow: hidden; // To contain pseudo-elements
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(212, 43, 156, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &-primary {
+        background-color: pink; // Changed primary color to pink
+        border-color: #ff69b4; // New primary border color
+        color: white; // White text color
+        &:hover {
+            background-color: lighten(pink, 15%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+        }
+    }
+
+    &-danger {
+        background-color: rgb(255, 105, 180); // Hot pink for danger button
+        border-color: rgb(255, 20, 147); // Deep pink border color
+        color: white; // White text color
+        &:hover {
+            background-color: lighten(rgb(255, 105, 180), 10%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+        }
+    }
+}
