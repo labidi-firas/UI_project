@@ -53,7 +53,7 @@ module.exports = {
         },
         gray: {
           400: "#9CA3AF", // Adjust this to match your exact gray shade
-          800: "#1F2937",
+          800: "#2C2C2C",
           900: "#111827",
         },
       },
