@@ -15,4 +15,4 @@ Exécutez la commande suivante pour installer Tailwind CSS :
 ```bash
 npm install -D tailwindcss@3
 npx tailwindcss init
-npm run buil
+npm run build
