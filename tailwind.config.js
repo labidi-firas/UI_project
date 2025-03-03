@@ -49,7 +49,7 @@ module.exports = {
         black: "#000000",
         white: "#FFFFFF",
         yellow: {
-          500: "#EAB308", // Adjust this to match your exact yellow shade
+          500: "#F19E05", // Adjust this to match your exact yellow shade
         },
         gray: {
           400: "#9CA3AF", // Adjust this to match your exact gray shade
