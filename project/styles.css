@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+.product-image {
+  @apply transition-transform duration-300;
+}
+
+.product-image:hover {
+  @apply transform scale-105;
+}
+
+.quantity-btn {
+  @apply bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded;
+}
+
+.review-item {
+  @apply border-t border-gray-800 py-4;
+}
+
+.social-icon {
+  @apply text-gray-400 hover:text-white transition-colors duration-200;
+}
