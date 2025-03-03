@@ -630,6 +630,7 @@ video {
   top: 0.75rem;
 }
 
+<<<<<<< HEAD
 .top-4 {
   top: 1rem;
 }
@@ -639,6 +640,8 @@ video {
   margin-right: -0.75rem;
 }
 
+=======
+>>>>>>> a73446f8e4523c72e8e4a17bf5760a5291a2a8e6
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1315,6 +1318,7 @@ video {
 }
 
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1323,6 +1327,8 @@ video {
     width: 50%;
   }
 
+=======
+>>>>>>> a73446f8e4523c72e8e4a17bf5760a5291a2a8e6
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
