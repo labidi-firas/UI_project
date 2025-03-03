@@ -1,0 +1,45 @@
+<!-- Login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessPro Sign In</title>
+    <link href="../public/style.css" rel="stylesheet">
+</head>
+<body class="bg-dark flex items-center justify-center min-h-screen">
+    <div class="bg-dark text-light p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <div class="flex justify-center mb-6">
+            <div class="bg-primary p-4 rounded-full">
+                <i class="fas fa-dumbbell text-3xl"></i>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold text-center mb-2 text-primary">Sign in to FitnessPro</h2>
+        <p class="text-center mb-6 text-light">Enter your credentials to access your fitness journey</p>
+        <form>
+            <div class="mb-4">
+                <label class="block mb-1 text-light">Email</label>
+                <div class="relative">
+                    <input type="email" placeholder="name@example.com" class="w-full p-3 bg-dark border border-primary rounded-lg text-gray-400">
+                    <i class="fas fa-envelope absolute left-3 top-3 text-primary"></i>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block mb-1 text-light">Password</label>
+                <div class="relative">
+                    <input type="password" placeholder="password" class="w-full p-3 bg-dark border border-primary rounded-lg text-gray-400">
+                    <i class="fas fa-lock absolute left-3 top-3 text-primary"></i>
+                    <a href="#" class="absolute right-3 top-3 text-primary">Forgot password?</a>
+                </div>
+            </div>
+            <div class="flex items-center mb-6">
+                <input type="checkbox" id="remember" class="mr-2">
+                <label for="remember" class="text-gray-400">Remember me</label>
+            </div>
+            <button type="submit" class="w-full bg-primary text-black py-3 rounded-lg font-bold">Start Your Workout</button>
+        </form>
+        <p class="text-center mt-6 text-gray-400">New to FitnessPro? <a href="#" class="text-primary">Sign up for a free trial</a></p>
+    </div>
+</body>
+</html>
+

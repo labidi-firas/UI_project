@@ -1,0 +1,207 @@
+@import 'variables';
+@import 'mixins';
+
+.main-header {
+    background-color: $secondary-color;
+    border-bottom: 3px solid $primary-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include responsive(mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    i {
+        font-size: 1.5rem; // Reduced from 1.8rem
+        color: $primary-color;
+    }
+    
+    h1 {
+        font-size: 1.5rem; // Reduced from 1.8rem
+        color: $primary-color;
+        margin: 0;
+        font-weight: 700;
+    }
+}
+
+.main-nav {
+    @include responsive(desktop) {
+        margin-left: auto;
+    }
+    
+    @include responsive(mobile) {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    
+    @include responsive(mobile) {
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        
+        &.active {
+            max-height: 300px;
+        }
+    }
+    
+    li {
+        @include responsive(mobile) {
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    
+    a {
+        display: block;
+        padding: 8px 12px; // Reduced from 10px 15px
+        color: $text-color-light;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+        
+        &:hover, &.active {
+            color: $primary-color;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: $primary-color;
+            transition: width 0.3s ease;
+        }
+        
+        &:hover::after, &.active::after {
+            width: 80%;
+            
+            @include responsive(mobile) {
+                width: 0;
+            }
+        }
+        
+        @include responsive(mobile) {
+            padding: 15px 0;
+        }
+    }
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    
+    @include responsive(mobile) {
+        display: block;
+        margin-left: auto;
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $primary-color;
+        margin: 5px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    &.active {
+        .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    
+    @include responsive(mobile) {
+        margin-left: 20px;
+    }
+    
+    .btn {
+        padding: 6px 14px; // Reduced from 8px 16px
+        font-size: 14px;
+        
+        &-login {
+            background-color: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            
+            &:hover {
+                background-color: rgba($primary-color, 0.1);
+            }
+        }
+        
+        &-signup {
+            background-color: $primary-color;
+            color: $text-color-dark;
+            
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    h2 {
+        color: $primary-color;
+        font-size: 2.2rem;
+        margin: 0 0 10px 0;
+    }
+    
+    p {
+        color: $text-color-light;
+        font-size: 1.1rem;
+        opacity: 0.8;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
