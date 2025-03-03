@@ -1,4 +1,4 @@
-# Projet Git - Équipe DevMasters  
+# Projet Git - Équipe ByteBuilders  
 
 ## 1. Membres de l'équipe et leurs responsabilités  
 
